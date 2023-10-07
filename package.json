@@ -16,7 +16,7 @@
     "spellcheck": "cspell lint --dot --gitignore --color --cache --show-suggestions \"src/**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md|vue)\"",
     "lint": "run-p lint:js type-check lint:style spellcheck",
     "lint:stage": "lint-staged",
-    "commit": "cz-git",
+    "commit": "git-cz",
     "commitlint": "commitlint --edit"
   },
   "lint-staged": {
