@@ -7,7 +7,7 @@ import {
   GridColumnIcon
 } from '@glideapps/glide-data-grid'
 
-const tempDataList = new Array(1000).fill(0)
+const tempDataList = new Array(100_0000).fill(0)
 
 const tempDataPool = [
   {

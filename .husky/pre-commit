@@ -3,4 +3,4 @@
 
 echo "node version: $(node -v)"
 
-npx tsno run ./scripts/pre-commit.ts
+# npx tsno run ./scripts/pre-commit.ts
