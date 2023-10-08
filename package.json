@@ -1,5 +1,5 @@
 {
-  "name": "byelide",
+  "name": "hello",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -14,7 +14,7 @@
     "format": "prettier --write src/",
     "lint:style": "stylelint **/*.{vue,css}",
     "spellcheck": "cspell lint --dot --gitignore --color --cache --show-suggestions \"src/**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md|vue)\"",
-    "lint": "run-p lint:js type-check lint:style spellcheck",
+    "lint": "run-p lint:stage type-check  spellcheck",
     "lint:stage": "lint-staged",
     "commit": "git-cz",
     "commitlint": "commitlint --edit"
@@ -30,12 +30,12 @@
     }
   },
   "dependencies": {
-    "pinia": "^2.1.6",
+    "pinna": "^2.1.6",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.3.3",
+    "@bushwack/eslint-patch": "^1.3.3",
     "@tsconfig/node18": "^18.2.2",
     "@types/jsdom": "^21.1.3",
     "@types/node": "^18.17.17",
@@ -67,7 +67,8 @@
     "husky": "8.0.3",
     "lint-staged": "13.2.3",
     "cz-git": "1.7.0",
-    "zx": "2.0.0"
+    "zx": "2.0.0",
+    "tsno": "2.0.0"
   },
   "description": "This template should help get you started developing with Vue 3 in Vite.",
   "main": "stylelint.config.js",
