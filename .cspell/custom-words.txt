@@ -1,4 +1,3 @@
-byelide
 commitlint
 optimizelegibility
 pinia

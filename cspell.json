@@ -1,7 +1,6 @@
 {
   "import": ["@cspell/dict-lorem-ipsum/cspell-ext.json"],
   "caseSensitive": false,
-  "words": ["pinia"],
   "dictionaries": ["custom-words"],
   "dictionaryDefinitions": [
     {
