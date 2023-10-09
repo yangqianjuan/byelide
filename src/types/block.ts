@@ -70,3 +70,12 @@ export type BlockInfo =
   // external
   | ButtonBlockInfo
   | FormBlockInfo
+
+export type ChartType = 'echarts' | 'canvas' | 'svg'
+
+export interface ChartBlockInfo extends BaseBlockInfo {
+  type: 'chart'
+  props: {
+    chartType: ChartType
+  }
+}

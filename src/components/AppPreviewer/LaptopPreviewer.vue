@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { PreviewType } from './type'
 import PreviewModeSwitcher from './PreviewModeSwitcher.vue'
-import BlockRenderer from '@/blocks/BlockRenderer.vue'
+import BlocksRenderer from '@/blocks/BlocksRenderer.vue'
 const props = defineProps<{
   previewMode?: PreviewType
 }>()
@@ -29,7 +29,7 @@ function greet(mode: PreviewType) {
       </div>
       <div class="layout-runner-content">
         <!-- 编排引擎 -->
-        <BlockRenderer />
+        <BlocksRenderer />
       </div>
     </div>
   </div>

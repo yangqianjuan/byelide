@@ -78,9 +78,6 @@ const blocksMap = blockSuite.getBlocksMap()
 export const blocksMapSymbol = Symbol('blocksMap')
 
 export const setup = (app: App<Element>) => {
-  // 自定义的 Vue 插件
-  // 1. 可以是一个对象也可以是一个函数
-  // 2. 如果是对象的话要有一个 install 方法
   const ins = {
     install(app: App<Element>) {
       // 这两个操作基本上是 Vue3 视图相关插件的标配
