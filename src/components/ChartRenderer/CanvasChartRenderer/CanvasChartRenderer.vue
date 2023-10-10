@@ -30,6 +30,22 @@ onMounted(() => {
   })
   zr.add(t1)
 
+  const rect=new zrender.Rect({
+    shape:{
+      x:w/2-5,
+      y:h/2-5,
+      width:100,
+      height:100
+    },
+    style:{
+      fill: 'red',
+      blend:'lighten'
+    }
+    
+  })
+
+  zr.add(rect)
+
   var t2 = new zrender.Text({
     culling: true,
     style: {
