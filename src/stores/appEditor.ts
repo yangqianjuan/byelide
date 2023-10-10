@@ -16,12 +16,28 @@ export const useAppEditorStore = defineStore('appEditor', () => {
   }
 
   function updateBlock(id: string, newBlock: BlockInfo) {
-    blocks.value = blocks.value.map((block) => {
-      if (block.id === id) {
-        return newBlock
+    // blocks.value = blocks.value.map((block) => {
+    //   if (block.id === id) {
+    //     return newBlock
+    //   }
+    //   return block
+    // })
+// 优化
+
+    // for(const block of blocks.value){
+    //   if(block.id===id){
+    //     Object.assign(block,newBlock)
+    //     break
+    //   }
+    // }
+
+      for(const block of blocks.value){
+      if(block.id===id){
+      //反射
+        Reflect.set(block,'props',newBlock.props)
+        break
       }
-      return block
-    })
+    }
   }
 
   return { currentBlockId, blocks, selectBlock, updateBlocks, updateBlock }
