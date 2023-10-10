@@ -1,5 +1,5 @@
-import { h } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
+import { createMemoryHistory, createRouter, createWebHistory } from 'vue-router'
+
 import AppView from '../views/AppView.vue'
 
 const router = createRouter({
@@ -13,7 +13,7 @@ const router = createRouter({
         {
           path: 'dataSource',
           name: 'dataSource',
-          component: import('../views/DataSourceView.vue'),
+          component: () => import('../views/DataSourceView.vue'),
           children: [
             {
               path: ':id',
@@ -39,6 +39,11 @@ const router = createRouter({
       ]
     },
     {
+      path: '/runner',
+      name: 'runner',
+      component: () => import('../views/RunnerView.vue')
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting
@@ -49,9 +54,19 @@ const router = createRouter({
     {
       path: '/',
       redirect: '/app/layout'
-    },
-    { path: '/:pathMatch(.*)*', name: '404', component: () => h('div', '404') }
+    }
   ]
 })
+
+// export const innerRouter = createRouter({
+//   history: createMemoryHistory(import.meta.env.BASE_URL),
+//   routes: [
+//     {
+//       path: '/',
+//       name: 'home',
+//       component: HomeView
+//     }
+//   ]
+// })
 
 export default router
